@@ -6,12 +6,11 @@ TJ H Lopez de Leon
 
 //4
 "use strict";
-
+var delivInfo = {};
+var delivSummary = document.getElementById("deliverTo");
 
 //5
 function processDeliveryInfo(){
-   var delivInfo = {};
-   var delivSummary = document.getElementById("deliverTo");
    var prop;
    delivInfo.name = document.getElementById("nameinput").value;
    delivInfo.addr = document.getElementById("addrinput").value;
@@ -21,9 +20,7 @@ function processDeliveryInfo(){
    //6
    for (prop in delivInfo) {
       delivSummary.innerHTML += "<p>" + delivInfo[prop] + "</p>";
-      //document.write(delivInfo[prop]);
    }
-   
 }
 
 //7
